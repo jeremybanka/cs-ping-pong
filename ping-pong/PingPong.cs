@@ -8,13 +8,25 @@ namespace PingPong
     {
       for (int idx = 0; idx <= upTo; idx++)
       {
-        // 16 % 8 = 0
-        if (idx % 3 == 0)
+        bool isDivisibleByThree = idx % 3 == 0;
+        bool isDivisibleByFive = idx % 5 == 0;
+        if (isDivisibleByThree && isDivisibleByFive)
+        {
+          Console.WriteLine("Ping-Pong");
+        }
+        else if (isDivisibleByThree)
         {
           Console.WriteLine("Ping");
         }
+        else if (isDivisibleByFive)
+        {
+          Console.WriteLine("Pong");
+        }
+        else
+        {
+          Console.WriteLine(idx);
+        }
       }
-
     }
   }
 }
