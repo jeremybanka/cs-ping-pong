@@ -1,4 +1,5 @@
 using System;
+//using PingPong;
 
 namespace PingPong
 {
@@ -11,6 +12,7 @@ namespace PingPong
       try
       {
         int intInput = int.Parse(userInput);
+        Reporter.Report(intInput);
       }
       catch (FormatException e)
       {
